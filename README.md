@@ -1,5 +1,23 @@
 # AI-Z User Guide
 
+> [!IMPORTANT]
+> **macOS first launch notice**
+>
+> AI-Z alpha builds are ad-hoc signed and not Apple-notarized yet. If macOS blocks the app after download, use one of these two methods:
+>
+> **Method 1: Finder approval**
+> 1. Open Finder and locate `AI-Z.app`.
+> 2. Hold `Control` and click the app, or right-click it, then choose `Open`.
+> 3. In the warning dialog, choose `Open Anyway` if it appears.
+> 4. macOS will remember this approval for future launches.
+>
+> **Method 2: remove quarantine from Terminal**
+> ```bash
+> xattr -dr com.apple.quarantine /path/to/AI-Z.app
+> open /path/to/AI-Z.app
+> ```
+> Replace `/path/to/AI-Z.app` with the actual path to the downloaded app.
+
 AI-Z is a local AI benchmark dashboard for measuring how your machine runs local language models. It connects to a local OpenAI-compatible runtime, runs repeatable text-generation scenarios, and saves the result on your computer.
 
 ![AI-Z Benchmark Dashboard](assets/ai-z-dashboard.png)
