@@ -1,0 +1,9 @@
+# Ignore everything by default
+*
+
+# Release repository allowlist
+!.gitignore
+!README.md
+!assets/
+!assets/**
+!AI-Z-macos-arm64-0.1.0-alpha-test.zip
