@@ -2,6 +2,8 @@
 
 AI-Z is a local AI benchmark dashboard for measuring how your machine runs local language models. It connects to a local OpenAI-compatible runtime, runs repeatable text-generation scenarios, and saves the result on your computer.
 
+![AI-Z Benchmark Dashboard](assets/ai-z-dashboard.png)
+
 This guide is written for end users. For architecture and development notes, see the main project README.
 
 ## What AI-Z Measures
