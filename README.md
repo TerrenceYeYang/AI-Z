@@ -20,7 +20,7 @@
 
 AI-Z is a local AI benchmark dashboard for measuring how your machine runs local language models. It connects to a local OpenAI-compatible runtime, runs repeatable text-generation scenarios, and saves the result on your computer.
 
-![AI-Z Benchmark Dashboard](assets/ai-z-dashboard.png)
+![AI-Z Benchmark Dashboard Overview](assets/aiz-dashboard-overview.jpg)
 
 This guide is written for end users. For architecture and development notes, see the main project README.
 
@@ -36,6 +36,8 @@ AI-Z focuses on practical local inference behavior:
 - A local score for the selected benchmark scenario.
 
 The current benchmark family is `TC001`, a set of text-generation scenarios covering Q&A, reasoning, code generation, professional writing, creative writing, and technical advice.
+
+![AI-Z Live Transcript With Run Manifest](assets/aiz-live-transcript-poem.jpg)
 
 ## Requirements
 
@@ -59,6 +61,8 @@ AI-Z does not include, download, or install models. Prepare a local text-generat
 7. Use `MANIFEST` to review the run summary, or `VIEW / REPLAY` to open saved local results.
 
 On the first launch, macOS may block an unsigned app. If that happens, right-click `AI-Z.app`, choose `Open`, and confirm. You can also allow it from `System Settings -> Privacy & Security`.
+
+![AI-Z Live Document Generation](assets/aiz-live-transcript-document.jpg)
 
 ## Runtime Setup
 
@@ -103,6 +107,8 @@ http://127.0.0.1:11434/v1
 
 By default, AI-Z resets resident local models and sends one unscored warm-up request before the measured run. Keep warm-up enabled for routine comparisons. Use `NO WARM UP` only when you intentionally want to measure cold-start behavior.
 
+![AI-Z Long-Form Transcript View](assets/aiz-live-transcript-essay.jpg)
+
 ## Understanding Results
 
 - `AVERAGE SPEED`: average generation speed in tokens per second. Higher usually means faster output.
@@ -113,6 +119,11 @@ By default, AI-Z resets resident local models and sends one unscored warm-up req
 - `MODEL FILE / UNIFIED MEMORY`: model file size compared with unified memory. This is a planning baseline, not exact runtime memory usage. KV cache, context length, parallelism, and backend overhead can use additional memory.
 
 For cleaner comparisons, run the same model and scenario more than once. First runs can be affected by model loading, cache state, background apps, and temperature.
+
+<p>
+  <img src="assets/aiz-capacity-radar-deepseek.jpg" alt="AI-Z Capacity Radar For DeepSeek Coder" width="49%">
+  <img src="assets/aiz-capacity-radar-llama.jpg" alt="AI-Z Capacity Radar For Llama" width="49%">
+</p>
 
 ## Saved Results
 
@@ -132,6 +143,8 @@ Completed runs include:
 
 - `result.json`: final benchmark result and metadata.
 - `events.jsonl`: append-only event stream for replay and diagnostics.
+
+![AI-Z Saved Run Archive](assets/aiz-run-archive.jpg)
 
 Deleting the app does not necessarily delete saved benchmark results.
 
