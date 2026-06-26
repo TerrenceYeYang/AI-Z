@@ -101,11 +101,10 @@ http://127.0.0.1:11434/v1
 - `PROVIDER`: selects LM Studio or Ollama.
 - `MODEL`: selects the discovered local model.
 - `RUN LIVE TEST`: starts a real local benchmark run.
-- `NO WARM UP`: skips the default warm-up request and includes cold-start behavior in the measured run.
 - `VIEW / REPLAY`: opens saved local benchmark results.
 - `MANIFEST`: opens the run summary, metadata, and diagnostic notes.
 
-By default, AI-Z resets resident local models and sends one unscored warm-up request before the measured run. Keep warm-up enabled for routine comparisons. Use `NO WARM UP` only when you intentionally want to measure cold-start behavior.
+By default, AI-Z resets resident local models and sends one unscored warm-up request before the measured run. This keeps routine comparisons focused on steady local inference behavior.
 
 ![AI-Z Long-Form Transcript View](assets/aiz-live-transcript-essay.jpg)
 
