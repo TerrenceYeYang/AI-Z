@@ -1,5 +1,7 @@
 # AI-Z User Guide
 
+Community: join [AI-Z Discussions](https://github.com/TerrenceYeYang/AI-Z/discussions) for questions, benchmark results, model/provider comparisons, and Human-Z roadmap discussion. Start with the [welcome thread](https://github.com/TerrenceYeYang/AI-Z/discussions/1).
+
 > [!IMPORTANT]
 > **macOS first launch notice**
 >
